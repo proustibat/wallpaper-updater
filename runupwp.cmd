@@ -154,8 +154,8 @@ echo                                                                   ^|___/   
 	echo ----------------------------------------------------------------------------------------------------------------
 	echo "%outputFilename%" will be deleted and replaced by "!file[%rand%]!" with the same name.
 
-	set /P AREYOUSURE=Are you ok with that (Y/[N])?
-	if /I "%AREYOUSURE%" NEQ "Y" goto ENDTOOBAD
+	set /p AREYOUSURE=Are you ok with that (Y/[N])?
+	if /i "%AREYOUSURE%" NEQ "Y" goto ENDTOOBAD
 
 
 	REM #######################################################################
@@ -246,10 +246,10 @@ echo                                                                   ^|___/   
 
 
 :END
-::cmd
-popd
-cmd
-PAUSE>nul&GOTO:EOF
+    ::cmd
+    popd
+    cmd
+    PAUSE>nul&GOTO:EOF
 ::cd %srcDir%
 
 :--------------------------------------
@@ -260,4 +260,5 @@ PAUSE>nul&GOTO:EOF
 		echo Terminal will close in %%a seconds
 	)
 	echo.&GOTO:EOF
+	exit /b
 :--------------------------------------
