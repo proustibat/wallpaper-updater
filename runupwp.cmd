@@ -9,6 +9,7 @@ REM #######################################################################
 REM Define your wallpapers directory
 ::set wpDir=%USERPROFILE%\Pictures\wallpapers
 set wpDir=%~dp0\wallpapers
+::set wpDir=%~dp0\.idea
 
 
 REM Define the filename imposed by your IT department
@@ -40,12 +41,13 @@ REM Save script location
 :checkPermissions
     net session >nul 2>&1
     if %errorLevel% == 0 (
-		msg %username% /time:0 Please ensure all work is saved before you continue!
+		::msg %username% /time:0 Please ensure all work is saved before you continue!
         echo Success: Administrative permissions confirmed.!LF!
 		goto runScript
     ) else (
-        echo Failure: you need to run this script as administrator^^!!LF!
-		pause 
+        :: No rights
+        echo You need to run this script as administrator^^!!LF!
+		::pause
 		:: BatchGotAdmin
 		:askPermissions
 			REM  --> Check for permissions
@@ -114,11 +116,11 @@ echo                                                                   ^|___/   
 	REM #######################################################################
 	:listfiles
 	echo !LF!----------------------------------------------------------------------------------------------------------------
-	echo  Listing all files in %wpDir%...
+	echo  Listing all files
 	echo ----------------------------------------------------------------------------------------------------------------
 	cd %wpDir%
 	set count=0
-	for %%f in (*.*) do (
+	for %%f in (*.jpg*) do (
 	   echo - %%f
 	   if [%currentWallpaper%] == [%%f] (
 		echo   will be excluded because it's the current wallpaper
@@ -127,7 +129,16 @@ echo                                                                   ^|___/   
 		set "file[!count!]=%%f"
 	   )
 	)
-	echo There are %count% files.
+	if %count%==0 (
+	    echo Hey dude I need jpg files in your folder.
+	    goto DELAYCLOSE
+	)
+	if %count%==1 (
+	    echo There are %count% file.
+	)else (
+	    echo There are %count% files.
+	)
+
 
 ::cd %currentDir%
 
@@ -195,7 +206,7 @@ echo                                                                   ^|___/   
 	
 	:BACKUPCURRENTWALLPAPER	
 		echo !LF!----------------------------------------------------------------------------------------------------------------
-		echo  Backup the name of the background installed in %wpDir%\currentwp.txt	
+		echo  Backup the name of the background installed in currentwp.txt
 		echo ----------------------------------------------------------------------------------------------------------------
 		echo !file[%rand%]!> %wpDir%\currentwp.txt	
 		pause
