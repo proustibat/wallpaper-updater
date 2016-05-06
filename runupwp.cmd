@@ -7,7 +7,8 @@ REM 	Setting variables
 REM #######################################################################
 
 REM Define your wallpapers directory
-set wpDir=%USERPROFILE%\Pictures\wallpapers
+::set wpDir=%USERPROFILE%\Pictures\wallpapers
+set wpDir=%~dp0\wallpapers
 
 
 REM Define the filename imposed by your IT department
