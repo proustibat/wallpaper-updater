@@ -15,7 +15,7 @@ So I decided to make some efforts to skirt this restriction.
 
 Problem
 -------------
-My IT department is smart enough to disable access to the Registry Editor . That's quite normal and understandable.
+My IT department is smart enough to disable access to the Registry Editor. That's quite normal and understandable.
 I do not want to touch it. I just wanna customize my wallpapers.
 
 > **My chance:**
@@ -37,7 +37,7 @@ First to not attract attention and then to not create a dysfunction.
 >It has these properties : hidden file and read-only mode.
 
 ##### 2. Copy your desired wallpaper in the same folder with the name of the original.
-##### 3. Give it the same properties that the original.
+##### 3. Give it the same properties than the original.
 ##### 4. Restart your computer.
 
 
@@ -46,12 +46,12 @@ Automatisation
 -------------
 
 These batch script allow you to change wallpaper just by clicking on the script. It opens a terminal with some instructions. 
-You just need to change the path to your wallpapers. Then it will pick up one of them randomly and will refresh your desktop by restarting explorer task.
+You just need to change the path to your wallpapers if you want. Otherwise it will be the folder "wallpapers" beside the script. Then it will pick up one of them randomly and will refresh your desktop by restarting explorer task.
 
 #### Change your path here in code
 ```
 REM Define your wallpapers directory
-set wpDir=%USERPROFILE%\Pictures\wallpapers
+set wpDir=%~dp0\wallpapers
 ```
 
 
