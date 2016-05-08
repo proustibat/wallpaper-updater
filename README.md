@@ -69,15 +69,17 @@ set wpDir=%~dp0\wallpapers
 Demo
 -------------
 #### After this window, a prompt will request to run as administrator, you have to accept it.
-![step01](https://cloud.githubusercontent.com/assets/1054387/15070008/d24846cc-1381-11e6-9750-5c88ac54cada.jpg)
+![step1](https://cloud.githubusercontent.com/assets/1054387/15070008/d24846cc-1381-11e6-9750-5c88ac54cada.jpg)
 
 ### Follow the next steps as below:
-
-![step3](https://cloud.githubusercontent.com/assets/1054387/15070046/286f3574-1382-11e6-9cd5-4a9a13861aab.jpg)
-
-![step4](https://cloud.githubusercontent.com/assets/1054387/15070049/2da94e80-1382-11e6-824b-1f68d4251ae0.jpg)
-
-![step5](https://cloud.githubusercontent.com/assets/1054387/15070055/341f1e66-1382-11e6-877b-2d9ae81a3760.jpg)
+#### The script check if it can know current wallpaper
+![step2](https://cloud.githubusercontent.com/assets/1054387/15097864/50a3e8c8-152b-11e6-930f-ba2bb87ac981.jpg)
+#### List all files in wallpapers folder and excludes the current from the list
+![step3](https://cloud.githubusercontent.com/assets/1054387/15097865/54282aea-152b-11e6-96c3-e9901f6e9065.jpg)
+#### After your confirmed by entering "Y"
+![step4](https://cloud.githubusercontent.com/assets/1054387/15097866/575e3236-152b-11e6-8f06-c81b041e812c.jpg)
+#### Last step: restart explorer
+![step5](https://cloud.githubusercontent.com/assets/1054387/15097867/5a18d378-152b-11e6-843b-51cf0edd0a4b.jpg)
 
 
 
