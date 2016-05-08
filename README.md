@@ -62,7 +62,6 @@ Demo
 ![step01](https://cloud.githubusercontent.com/assets/1054387/15070008/d24846cc-1381-11e6-9750-5c88ac54cada.jpg)
 
 ### Follow the next steps as below:
-![step2](https://cloud.githubusercontent.com/assets/1054387/15070043/22874480-1382-11e6-80f6-9d64cfd209b7.jpg)
 
 ![step3](https://cloud.githubusercontent.com/assets/1054387/15070046/286f3574-1382-11e6-9cd5-4a9a13861aab.jpg)
 
