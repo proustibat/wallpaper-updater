@@ -42,17 +42,27 @@ First to not attract attention and then to not create a dysfunction.
 
 
 
-Automatisation
+Quick usage
 -------------
 
 These batch script allow you to change wallpaper just by clicking on the script. It opens a terminal with some instructions. 
 You just need to change the path to your wallpapers if you want. Otherwise it will be the folder "wallpapers" beside the script. Then it will pick up one of them randomly and will refresh your desktop by restarting explorer task.
 
-#### Change your path here in code
+#### Clone or download this repo where you want
+
+#### Change name of the original **(required)**
+```
+REM Define the filename imposed by your IT department
+set outputFilename=MazarineNoir_Grand.jpg
+```
+
+#### Change your path here in code **(optional)**
 ```
 REM Define your wallpapers directory
 set wpDir=%~dp0\wallpapers
 ```
+
+#### Just double click on `runupwp.cm`
 
 
 
